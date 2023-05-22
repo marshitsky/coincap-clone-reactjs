@@ -26,6 +26,7 @@ export const resetCSS = css`
   a:hover {
     color: inherit;
     text-decoration: none;
+    cursor: pointer;
   }
   a:focus,
   a:active {
