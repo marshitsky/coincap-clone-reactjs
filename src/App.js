@@ -1,5 +1,5 @@
 import React from "react";
-import { CurrencyList, NavBar } from "./components";
+import { CurrencyList, NavBar, Footer } from "./components";
 import { StyledApp } from "./styles";
 
 export const App = () => {
@@ -7,6 +7,7 @@ export const App = () => {
     <StyledApp>
       <NavBar />
       <CurrencyList />
+      <Footer />
     </StyledApp>
   );
 };
