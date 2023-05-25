@@ -1,9 +1,18 @@
 import React from "react";
-import { NavWrapper, NavBtnWrapper, NavBtn, StyledMainLogo } from "./styles";
+import {
+  Nav,
+  NavWrapper,
+  NavBtnWrapper,
+  NavBtn,
+  StyledMainLogo,
+  Selectors,
+} from "./styles";
+import { Settings } from "@styled-icons/feather/Settings";
+import { SearchAlt2 } from "@styled-icons/boxicons-regular/SearchAlt2";
 
 export const NavBar = () => {
   return (
-    <>
+    <Nav>
       <NavWrapper>
         <NavBtnWrapper>
           <NavBtn>Coins</NavBtn>
@@ -13,7 +22,7 @@ export const NavBar = () => {
 
         <StyledMainLogo alt="main-logo" />
 
-        <div>
+        <Selectors>
           <select>
             <option value="1">USD</option>
             <option value="2">BYN</option>
@@ -27,10 +36,14 @@ export const NavBar = () => {
             <option value="3">Deutch</option>
             <option value="4">Russian</option>
           </select>
-          <button>Search</button>
-          <button>Conf</button>
-        </div>
+          <a href>
+            <SearchAlt2 style={{ height: "20px" }} />
+          </a>
+          <a href>
+            <Settings style={{ height: "20px" }} />
+          </a>
+        </Selectors>
       </NavWrapper>
-    </>
+    </Nav>
   );
 };
