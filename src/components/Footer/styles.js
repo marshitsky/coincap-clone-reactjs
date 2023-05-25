@@ -1,14 +1,11 @@
 import styled from "styled-components";
+import { Colors } from "../../ui/colors";
 
 const StyledFooter = styled.footer`
   display: grid;
   place-items: center;
   padding: 42px;
-  background-image: linear-gradient(
-    to right,
-    rgb(63, 81, 181),
-    rgb(100, 181, 246)
-  );
+  background: ${Colors.LINEAR_BACKROUND};
 `;
 
 const FooterWrapper = styled.div`

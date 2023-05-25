@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCurrencies } from "../../store";
-import { CurrencyItem } from "../../components";
+import { CurrencyItem, ThemeToggler } from "../../components";
 import {
   CoinsList,
   ListWrapper,
@@ -14,6 +14,7 @@ import {
   StatisticName,
   StatInfo,
   StatNum,
+  Thead,
 } from "./styles";
 
 export const CurrencyList = () => {
@@ -29,6 +30,7 @@ export const CurrencyList = () => {
     <ListWrapper>
       <InfoBlock>
         <MarketValues>
+          <ThemeToggler />
           <Statistic>
             <StatisticName>market cap</StatisticName>
             <StatInfo>
@@ -70,7 +72,7 @@ export const CurrencyList = () => {
 
       <CoinsList>
         <Table>
-          <thead>
+          <Thead>
             <tr>
               <RowName>Rank</RowName>
               <RowName>Name</RowName>
@@ -81,7 +83,7 @@ export const CurrencyList = () => {
               <RowName>Volume(24Hr)</RowName>
               <RowName>Change(24Hr)</RowName>
             </tr>
-          </thead>
+          </Thead>
           <tbody>
             {currencies?.data?.map((currency) => (
               <CurrencyItem key={currency?.id} {...currency} />

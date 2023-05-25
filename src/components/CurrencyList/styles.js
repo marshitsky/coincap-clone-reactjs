@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../../ui/colors";
 
 const ListWrapper = styled.div`
   position: relative;
@@ -7,7 +8,8 @@ const ListWrapper = styled.div`
   place-self: center;
   width: 100%;
   padding-bottom: 21px;
-  background-color: #fff;
+  background-color: ${Colors.PRIMARY_BACKGROUND};
+  color: ${Colors.FONT_COLOR};
 `;
 
 const InfoBlock = styled.div`
@@ -16,8 +18,7 @@ const InfoBlock = styled.div`
   left: 0;
   width: 100%;
   padding-bottom: 10em !important;
-  background: linear-gradient(to right, rgb(63, 81, 181), rgb(100, 181, 246))
-    rgb(255, 255, 255);
+  background: ${Colors.LINEAR_BACKROUND};
   color: #fff;
 `;
 
@@ -60,7 +61,10 @@ const CoinsList = styled.table`
   z-index: 2;
 `;
 
+const Thead = styled.thead``;
+
 const Table = styled.thead`
+  background: ${Colors.TABKE_BG};
   border-collapse: separate;
   border-spacing: 3rem 10px;
 `;
@@ -98,4 +102,5 @@ export {
   StatisticName,
   StatInfo,
   StatNum,
+  Thead,
 };
