@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import {
   Nav,
   NavWrapper,
   NavBtnWrapper,
   NavBtn,
-  StyledMainLogo,
   Selectors,
+  Logo,
 } from "./styles";
 import { Settings } from "@styled-icons/feather/Settings";
 import { SearchAlt2 } from "@styled-icons/boxicons-regular/SearchAlt2";
 
 export const NavBar = () => {
+  const { theme } = useSelector((store) => store.theme);
+
+  useEffect(() => {
+    document.documentElement.getAttribute("theme");
+  }, [theme]);
+
   return (
     <Nav>
       <NavWrapper>
@@ -19,8 +26,19 @@ export const NavBar = () => {
           <NavBtn>Exchanges</NavBtn>
           <NavBtn>Swap</NavBtn>
         </NavBtnWrapper>
-
-        <StyledMainLogo alt="main-logo" />
+        <div>
+          {theme === "light" ? (
+            <Logo
+              src="https://coincap.io/static/logos/black.svg"
+              alt="main-logo"
+            />
+          ) : (
+            <Logo
+              src="https://coincap.io/static/logos/white.svg"
+              alt="main-logo"
+            />
+          )}
+        </div>
 
         <Selectors>
           <select>

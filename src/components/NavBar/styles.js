@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { MainLogo } from "../../assets";
 import { Colors } from "../../ui/colors";
 
 const Nav = styled.nav`
@@ -20,6 +19,10 @@ const NavBtnWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   height: 100%;
+`;
+
+const Logo = styled.img`
+  height: 50px;
 `;
 
 const NavBtn = styled.a`
@@ -45,9 +48,4 @@ const Selectors = styled.div`
   color: ${Colors.FONT_COLOR};
 `;
 
-const StyledMainLogo = styled(MainLogo)`
-  height: 58px;
-  padding: 8px 0 8px 0;
-`;
-
-export { Nav, NavWrapper, NavBtnWrapper, NavBtn, StyledMainLogo, Selectors };
+export { Nav, NavWrapper, Logo, NavBtnWrapper, NavBtn, Selectors };
