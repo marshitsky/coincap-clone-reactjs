@@ -24,7 +24,7 @@ const InfoBlock = styled.div`
 
 const MarketValues = styled.div`
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   justify-content: center;
   margin: 0 auto;
   padding: 1.3em 0;
