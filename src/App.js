@@ -1,13 +1,7 @@
 import React from "react";
-import { CurrencyList, NavBar, Footer } from "./components";
-import { StyledApp } from "./styles";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router/router";
 
 export const App = () => {
-  return (
-    <StyledApp>
-      <NavBar />
-      <CurrencyList />
-      <Footer />
-    </StyledApp>
-  );
+  return <RouterProvider router={router} />;
 };
