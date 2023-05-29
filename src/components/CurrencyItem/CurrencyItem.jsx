@@ -1,7 +1,9 @@
 import React from "react";
+import { generatePath, useNavigate } from "react-router-dom";
 import { getFloat } from "../../utils/getFloat";
 import { getSimpleValues } from "../../utils/getSimpleValues";
 import { CoinSymbol, TableItem, TableElement, CoinAbbr } from "./styles";
+import { ROUTE } from "../../router/routes.js";
 
 export const CurrencyItem = ({
   rank,
@@ -23,8 +25,18 @@ export const CurrencyItem = ({
   const volumeValue = getSimpleValues(volumeUsd24Hr);
   const changePercentNumber = getFloat(changePercent24Hr);
 
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate(generatePath(ROUTE.HOME + ROUTE.COIN, { id: "" }), {
+      state: {
+        item: "",
+      },
+    });
+  };
+
   return (
-    <TableItem>
+    <TableItem onClick={handleNavigate}>
       <TableElement>{rank}</TableElement>
       <TableElement>
         <CoinSymbol>
